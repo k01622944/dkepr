@@ -42,4 +42,11 @@ public class paramValue {
 	    return p;
 	}
 
+	public String getName() {
+		return name;
+	}
+
+	public List<paramValue> getCovers() {
+		return covers;
+	}
 }

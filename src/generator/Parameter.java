@@ -3,6 +3,8 @@ package generator;
 import java.util.*;
 
 public class Parameter {
+
+
 	String name;
 	List<paramValue> paramValues = new ArrayList<>();
 	private static Random random = new Random();
@@ -35,8 +37,11 @@ public class Parameter {
 	   int range = Math.abs(max - min) + 1;     
 	   return (int)(Math.random() * range) + (min <= max ? min : max);
 	}
-	
-	
-	
-	
+
+	public List<paramValue> getParamValues() {
+		return paramValues;
+	}
+	public String getName() {
+		return name;
+	}
 }

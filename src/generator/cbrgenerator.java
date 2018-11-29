@@ -62,7 +62,7 @@ public class cbrgenerator {
 		System.out.println("\n%------------------------------------------------------------------------");
 		System.out.println("% DEFINING PARAMETERS, PARAMETER VALUES, CONTEXTS, AND DETpARAMvALUE");
 		System.out.println("%------------------------------------------------------------------------");
-		//Ausgabe paramValues für jeden Parameter
+		//Ausgabe paramValues fï¿½r jeden Parameter
 		for(int i = 0; i < parameter.size(); i++){
 			for(int j = 0; j< parameter.get(i).paramValues.size();j++){
 				System.out.print("paramValue(\"" + parameter.get(i).name +  "\",\"" + parameter.get(i).paramValues.get(j).name + "\"). ");
@@ -70,15 +70,21 @@ public class cbrgenerator {
 			System.out.println();
 		}
 		System.out.println();
+
+
 		//Ausgabe der Covers Beziehungen
 		for(int i = 0; i<parameter.size(); i++){
-			//erstes Element von paramValues immer in Hierarchie ganz oben verknüpft mit beliebigen anderen paramValues durch covers Beziehung
-			for(int z = 0; z<randomWithRange(2,4); z++){
-				System.out.print("covers(\"" + parameter.get(i).paramValues.get(0).name + "\"," + parameter.get(z) + "\"). ");
+			if(parameter.get(i).getParamValues()!=null) {
+				paramValue rootValue = parameter.get(i).getParamValues().get(0);
+				//erstes Element von paramValues immer in Hierarchie ganz oben verknï¿½pft mit beliebigen anderen paramValues durch covers Beziehung
+				for (int z = 1; z < parameter.get(i).getParamValues().size(); z++) {
+					System.out.print("covers(\"" + rootValue.getName() + "\"," + parameter.get(i).getParamValues().get(z).getName() + "\"). ");
+				}
+				System.out.println();
 			}
-			System.out.println();
-			
 		}
+
+		
 
 	}
 
