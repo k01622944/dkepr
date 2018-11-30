@@ -2,35 +2,26 @@ package generator;
 
 import java.util.*;
 
+import static generator.cbrgenerator.generateString;
+
 public class Parameter {
-
-
+	private static Random random = new Random();
 	String name;
 	List<paramValue> paramValues = new ArrayList<>();
-	private static Random random = new Random();
+	List<String> detParamValues = new ArrayList<>();
+	BusinessCase businessCase = new BusinessCase();
 	
 	public Parameter(){
 		this.name =generateString();
 		for(int i = 0; i<randomWithRange (5,8); i++){
-			paramValues.add(new paramValue());
+			paramValues.add(new paramValue(this));
+		}
+		for(int i = 0; i<randomWithRange(1, 4);i++){
+			detParamValues.add(generateString().toUpperCase());
 		}
 	}
 	
-	public static String generateString() {
-		  
-	    int leftLimit = 97; // letter 'a'
-	    int rightLimit = 122; // letter 'z'
-	    int targetStringLength = 10;
-	    Random random = new Random();
-	    StringBuilder buffer = new StringBuilder(targetStringLength);
-	    for (int i = 0; i < targetStringLength; i++) {
-	        int randomLimitedInt = leftLimit + (int) 
-	          (random.nextFloat() * (rightLimit - leftLimit + 1));
-	        buffer.append((char) randomLimitedInt);
-	    }
-	    String generatedString = buffer.toString();
-	    return generatedString;
-	}
+
 	
 	int randomWithRange(int min, int max)
 	{
@@ -43,5 +34,15 @@ public class Parameter {
 	}
 	public String getName() {
 		return name;
+	}
+	public paramValue getRandomParamValue(){
+		return paramValues.get(randomWithRange(0,paramValues.size()-1));
+	}
+	public List<String> getDetParamValues() {
+		return detParamValues;
+	}
+
+	public BusinessCase getBusinessCase() {
+		return businessCase;
 	}
 }
