@@ -32,8 +32,11 @@ public class cbrgenerator {
 	}
 
 	public static void main(String[] args) {
-		int contexts = 4;
-		int paramCount = 5;
+
+		Properties p = new Properties();
+
+		int contexts = p.getamountc();
+		int paramCount = p.getamountparam();
 
 		List<Parameter> parameter = new ArrayList<Parameter>();
 		for(int i = 0; i<paramCount;i++){
