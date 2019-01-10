@@ -7,11 +7,17 @@ import static generator.cbrgenerator.randomWithRange;
 
 public class ContextClass {
 	String className ="contextClass";
-	List<Parameter> params = new ArrayList<Parameter>();
+	List<Parameter> params;
 	String name;
-	public ContextClass(List<Parameter> p, String name){
-		params=p;
-		this.name=name;
+	List<Context> ctxlist;
+
+
+	public ContextClass(int paramCount, String name){
+		this.params = new ArrayList<Parameter>();
+		for(int i = 0; i<paramCount;i++) {
+			params.add(new Parameter());
+			this.name = name;
+		}
 	}
 	
 	public String getName(){
@@ -22,8 +28,32 @@ public class ContextClass {
 		return className;
 	}
 
+	public String classNameToString(){
+		return (this.className + "(\"" + this.name + "\").\n");
+	}
+
+	public String paramsToString(){
+		if (this.params==null) return null;
+		String hasParameter = "";
+		String parameter = "";
+		String paramValue = "% -----------------------------------------------------------------------------\n" +
+				"% DEFINING PARAMETERS, PARAMETER VALUES, CONTEXTS, AND DETpARAMvALUE\n" +
+				"% -----------------------------------------------------------------------------\n" +
+				"% Parameter values and their hierarchy\n";
+		String covers = "";
+
+		for(int i =0; i<this.params.size(); i++){
+			hasParameter+=("hasParameter(\"" + this.className + "\",\"" + this.params.get(i).getName() + "\"). \n");
+			parameter+=("parameter(\"" + this.params.get(i).getName() + "\").\n");
+			paramValue+=(this.params.get(i).paramValuesToString());
+			covers+=(this.params.get(i).coversToString());
+		}
+
+		return hasParameter +'\n' + parameter +'\n' + paramValue +'\n' + covers;
+	}
+
 	public List<Context> getContexts (int contexts) {
-		List<Context> ctxlist = new ArrayList<>();
+		this.ctxlist = new ArrayList<>();
 
 		while(ctxlist.size()<contexts){
 			boolean similar = false;
@@ -47,41 +77,30 @@ public class ContextClass {
 				ctxlist.add(newContext);
 			}
 		}
-		return ctxlist;
+		return this.ctxlist;
 	}
 
-	public void printContexts(int numberOfContexts){
-		System.out.println("\n% Contexts");
+	public String contextsToString(int numberOfContexts){
+		String output = "%Contexts\n";
 		List<Context> contextList = this.getContexts(numberOfContexts);
 		int contextIndex = 0;
 		int index = 0;
 		for(Context c : contextList){
-			System.out.print("context(\""+ c.getName()+"\").");
-			System.out.print(" hasName(\""+ c.getName()+"\",\"" + c.getParamValues().get(0).getName() + "_" + c.getParamValues().get(1).getName() + "_"+c.getParamValues().get(2).getName() + "\").");
-			System.out.print(" hasModule(\"" + c.getName()+ "\",\"" + c.getModule()+ "\").");
-			System.out.print(" hasContextClass(\"" + c.getName() + "\",\"" + this.getName()+"\"). \n");
-
-			for(paramValue p : c.getParamValues()){
-				System.out.print("hasParamValue(\"" + c.getName() + "\",\"" + p.getParent().getName() + "\",\"" + p.getName()+ "\"). ");
-				index++;
-			}
-			System.out.println();
+			output+=c.contextNameToString();
+			output+=c.hasNameToString();
+			output+=c.hasModuleToString();
+			output+=(" hasContextClass(\"" + c.getName() + "\",\"" + this.getName()+"\"). \n");
+			output+= c.hasParameterToString();
 			contextIndex++;
 		}
+		return output;
 	}
 
-	public void printDetParamValues(){
-		System.out.println(" % Determine Parameter Values");
+	public String detParamValuesToString(){
+		String output = (" % Determine Parameter Values\n");
 		for(Parameter p : params){
-			for(String s : p.getDetParamValues()){
-				paramValue randomParam = p.getRandomParamValue();
-				System.out.print("detParamValue(" + p.getBusinessCase().getClassName() + ",\"" + p.getName() + "\",\"" +  s + "\") :- businessCase("+ p.getBusinessCase().getClassName()+"), " +
-						"hasInterestSpec(" + p.getBusinessCase().getClassName() + ", " + p.getBusinessCase().getInterestSpec().getName()+"), " +
-						"hasDescProp(" + p.getBusinessCase().getInterestSpec().getName() +",\""+ p.getName() +"\"," + randomParam.getName().substring(0,1) + "), " + randomParam.getName().toLowerCase()+"("
-						+ randomParam.getName().substring(0,1)+"), hasDescProp(" + randomParam.getName().substring(0,1)+",\"keineAhnung\"," + s + ").");
-
-				System.out.println();
-			}
+			output += p.detParamValueToString();
 		}
+		return output;
 	}
 }

@@ -1,0 +1,55 @@
+contextClass("aimCtx").
+
+hasParameter("contextClass","Nsdgrg"). 
+hasParameter("contextClass","Xlcthl"). 
+hasParameter("contextClass","Oeaxdu"). 
+hasParameter("contextClass","Devuqk"). 
+hasParameter("contextClass","Vsritq"). 
+
+parameter("Nsdgrg").
+parameter("Xlcthl").
+parameter("Oeaxdu").
+parameter("Devuqk").
+parameter("Vsritq").
+
+% -----------------------------------------------------------------------------
+% DEFINING PARAMETERS, PARAMETER VALUES, CONTEXTS, AND DETpARAMvALUE
+% -----------------------------------------------------------------------------
+% Parameter values and their hierarchy
+paramValue("Nsdgrg","Smeuol").paramValue("Nsdgrg","Bghcaw").paramValue("Nsdgrg","Qpbdsn").paramValue("Nsdgrg","Bhwcfd").paramValue("Nsdgrg","Oocyvs").paramValue("Nsdgrg","Gxrhjj").paramValue("Nsdgrg","Dklkoe").
+paramValue("Xlcthl","Htglso").paramValue("Xlcthl","Hxrtna").paramValue("Xlcthl","Ytdxlr").paramValue("Xlcthl","Pcsjxs").paramValue("Xlcthl","Puhfxf").paramValue("Xlcthl","Xfysjm").paramValue("Xlcthl","Neyynn").
+paramValue("Oeaxdu","Apevfe").paramValue("Oeaxdu","Xhqysa").paramValue("Oeaxdu","Zljcyw").paramValue("Oeaxdu","Rvlqzr").paramValue("Oeaxdu","Raxnly").paramValue("Oeaxdu","Myyjar").
+paramValue("Devuqk","Wcdrwv").paramValue("Devuqk","Bthaos").paramValue("Devuqk","Yjzejy").paramValue("Devuqk","Mzxmbj").paramValue("Devuqk","Ckkdvb").paramValue("Devuqk","Nnptij").
+paramValue("Vsritq","Hgtkgy").paramValue("Vsritq","Skutoq").paramValue("Vsritq","Buxzqk").paramValue("Vsritq","Trblfb").paramValue("Vsritq","Awezyp").paramValue("Vsritq","Jnsgyp").paramValue("Vsritq","Uubgor").
+
+covers("Smeuol","Bghcaw"). covers("Smeuol","Qpbdsn"). covers("Smeuol","Bhwcfd"). covers("Smeuol","Oocyvs"). covers("Smeuol","Gxrhjj"). covers("Smeuol","Dklkoe"). 
+covers("Htglso","Hxrtna"). covers("Htglso","Ytdxlr"). covers("Htglso","Pcsjxs"). covers("Htglso","Puhfxf"). covers("Htglso","Xfysjm"). covers("Htglso","Neyynn"). 
+covers("Apevfe","Xhqysa"). covers("Apevfe","Zljcyw"). covers("Apevfe","Rvlqzr"). covers("Apevfe","Raxnly"). covers("Apevfe","Myyjar"). 
+covers("Wcdrwv","Bthaos"). covers("Wcdrwv","Yjzejy"). covers("Wcdrwv","Mzxmbj"). covers("Wcdrwv","Ckkdvb"). covers("Wcdrwv","Nnptij"). 
+covers("Hgtkgy","Skutoq"). covers("Hgtkgy","Buxzqk"). covers("Hgtkgy","Trblfb"). covers("Hgtkgy","Awezyp"). covers("Hgtkgy","Jnsgyp"). covers("Hgtkgy","Uubgor"). 
+
+%Contexts
+context("ctx0"). hasName("ctx0","Puhfxf_Ckkdvb_Hgtkgy"). hasModule("ctx0","module0"). hasContextClass("ctx0","aimCtx"). 
+hasParamValue("ctx0","Xlcthl","Puhfxf"). hasParamValue("ctx0","Devuqk","Ckkdvb"). hasParamValue("ctx0","Vsritq","Hgtkgy"). 
+context("ctx1"). hasName("ctx1","Bghcaw_Ytdxlr_Yjzejy"). hasModule("ctx1","module1"). hasContextClass("ctx1","aimCtx"). 
+hasParamValue("ctx1","Nsdgrg","Bghcaw"). hasParamValue("ctx1","Xlcthl","Ytdxlr"). hasParamValue("ctx1","Devuqk","Yjzejy"). 
+context("ctx2"). hasName("ctx2","Myyjar_Awezyp_Smeuol"). hasModule("ctx2","module2"). hasContextClass("ctx2","aimCtx"). 
+hasParamValue("ctx2","Oeaxdu","Myyjar"). hasParamValue("ctx2","Vsritq","Awezyp"). hasParamValue("ctx2","Nsdgrg","Smeuol"). 
+context("ctx3"). hasName("ctx3","Buxzqk_Raxnly_Hxrtna"). hasModule("ctx3","module3"). hasContextClass("ctx3","aimCtx"). 
+hasParamValue("ctx3","Vsritq","Buxzqk"). hasParamValue("ctx3","Oeaxdu","Raxnly"). hasParamValue("ctx3","Xlcthl","Hxrtna"). 
+
+ % Determine Parameter Values
+detParamValue(BC,"Nsdgrg","NKDRCS") :- businessCase(BC), hasInterestSpec(BC, Q), hasDescProp(Q,"Nsdgrg",S), smeuol(S), hasDescProp(S,"keineAhnung",NKDRCS).
+detParamValue(BC,"Nsdgrg","DZFGCH") :- businessCase(BC), hasInterestSpec(BC, Q), hasDescProp(Q,"Nsdgrg",B), bghcaw(B), hasDescProp(B,"keineAhnung",DZFGCH).
+detParamValue(BC,"Nsdgrg","ZMPCYR") :- businessCase(BC), hasInterestSpec(BC, Q), hasDescProp(Q,"Nsdgrg",G), gxrhjj(G), hasDescProp(G,"keineAhnung",ZMPCYR).
+detParamValue(BC,"Nsdgrg","JODRUP") :- businessCase(BC), hasInterestSpec(BC, Q), hasDescProp(Q,"Nsdgrg",O), oocyvs(O), hasDescProp(O,"keineAhnung",JODRUP).
+detParamValue(BC,"Xlcthl","JJLQOL") :- businessCase(BC), hasInterestSpec(BC, H), hasDescProp(H,"Xlcthl",Y), ytdxlr(Y), hasDescProp(Y,"keineAhnung",JJLQOL).
+detParamValue(BC,"Oeaxdu","ELQDQZ") :- businessCase(BC), hasInterestSpec(BC, Y), hasDescProp(Y,"Oeaxdu",A), apevfe(A), hasDescProp(A,"keineAhnung",ELQDQZ).
+detParamValue(BC,"Oeaxdu","MTDGIL") :- businessCase(BC), hasInterestSpec(BC, Y), hasDescProp(Y,"Oeaxdu",Z), zljcyw(Z), hasDescProp(Z,"keineAhnung",MTDGIL).
+detParamValue(BC,"Oeaxdu","WVXGSZ") :- businessCase(BC), hasInterestSpec(BC, Y), hasDescProp(Y,"Oeaxdu",Z), zljcyw(Z), hasDescProp(Z,"keineAhnung",WVXGSZ).
+detParamValue(BC,"Devuqk","NRQOZK") :- businessCase(BC), hasInterestSpec(BC, U), hasDescProp(U,"Devuqk",Y), yjzejy(Y), hasDescProp(Y,"keineAhnung",NRQOZK).
+detParamValue(BC,"Devuqk","RUEKZI") :- businessCase(BC), hasInterestSpec(BC, U), hasDescProp(U,"Devuqk",M), mzxmbj(M), hasDescProp(M,"keineAhnung",RUEKZI).
+detParamValue(BC,"Vsritq","MSPVIK") :- businessCase(BC), hasInterestSpec(BC, H), hasDescProp(H,"Vsritq",T), trblfb(T), hasDescProp(T,"keineAhnung",MSPVIK).
+detParamValue(BC,"Vsritq","PPQWFC") :- businessCase(BC), hasInterestSpec(BC, H), hasDescProp(H,"Vsritq",U), uubgor(U), hasDescProp(U,"keineAhnung",PPQWFC).
+detParamValue(BC,"Vsritq","NYESCE") :- businessCase(BC), hasInterestSpec(BC, H), hasDescProp(H,"Vsritq",T), trblfb(T), hasDescProp(T,"keineAhnung",NYESCE).
+

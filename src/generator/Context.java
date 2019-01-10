@@ -19,6 +19,33 @@ public class Context {
         return paramValues.contains(one) && paramValues.contains(two) && paramValues.contains(three);
     }
 
+    public String contextNameToString(){
+        return ("context(\""+ this.name +"\").");
+    }
+
+    public String hasNameToString(){
+        return (" hasName(\""+ this.name +"\",\"" + this.paramValues.get(0).getName() + "_" + this.paramValues.get(1).getName() + "_"+this.paramValues.get(2).getName() + "\").");
+    }
+
+    public String hasModuleToString(){
+        return (" hasModule(\"" + this.name + "\",\"" + this.module + "\").");
+    }
+
+    public String hasContextClassToString(){
+        return (" hasContextClass(\"" + this.name + "\",\"" + this.getName()+"\"). \n");
+    }
+
+    public String hasParameterToString(){
+        String output ="";
+        int index = 0;
+        for(paramValue p : this.paramValues){
+            output+=("hasParamValue(\"" + this.name + "\",\"" + p.getParent().getName() + "\",\"" + p.getName()+ "\"). ");
+            index++;
+        }
+        output+='\n';
+        return output;
+    }
+
     public String getName(){
         return this.name;
     }
