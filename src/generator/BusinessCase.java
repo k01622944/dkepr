@@ -6,19 +6,15 @@ public class BusinessCase {
     InterestSpec interestSpec;
 
     public BusinessCase(){
-        this.interestSpec=new InterestSpec();
-    }
-    public BusinessCase(String name){
-        this.name=name;
-        this.interestSpec=new InterestSpec();
+        this.name=cbrgenerator.generateString().toLowerCase();
     }
 
     public String getClassName() {
-        return className;
+        return this.className;
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public InterestSpec getInterestSpec() {
@@ -27,6 +23,5 @@ public class BusinessCase {
 
     public void setName(String name){
         this.name=name;
-
     }
 }

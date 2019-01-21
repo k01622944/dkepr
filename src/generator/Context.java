@@ -6,17 +6,21 @@ import java.util.List;
 public class Context {
     String name ="";
     String module="";
-    List<paramValue> paramValues = new ArrayList<>();
+    List<Parameter> parameters;
+    List<paramValue> paramValues;
 
-    public Context(paramValue first, paramValue second, paramValue third){
-        paramValues.add(first);
-        paramValues.add(second);
-        paramValues.add(third);
+    public Context(List<Parameter> parameters){
+        this.parameters = parameters;
+        this.paramValues = getRandomParamValues();
     }
 
-    /*Method to check if a Context is similar to another Context*/
-    public boolean isSimilar(paramValue one, paramValue two, paramValue three){
-        return paramValues.contains(one) && paramValues.contains(two) && paramValues.contains(three);
+    private List<paramValue> getRandomParamValues(){
+        if(this.parameters==null)return null;
+        List<paramValue> paramValues = new ArrayList<>();
+        for(Parameter p : this.parameters){
+           paramValues.add(p.getRandomParamValue());
+        }
+        return paramValues;
     }
 
     public String contextNameToString(){
@@ -24,7 +28,17 @@ public class Context {
     }
 
     public String hasNameToString(){
-        return (" hasName(\""+ this.name +"\",\"" + this.paramValues.get(0).getName() + "_" + this.paramValues.get(1).getName() + "_"+this.paramValues.get(2).getName() + "\").");
+        String str = "";
+        int i = 0;
+        for(paramValue p : this.paramValues) {
+            if(i<this.paramValues.size()-1){
+                str+=(p.getName() + "_");
+            } else {
+                str+= p.getName() + "\").";
+            }
+            i++;
+        }
+        return (" hasModule(\"" + str);
     }
 
     public String hasModuleToString(){
@@ -38,8 +52,9 @@ public class Context {
     public String hasParameterToString(){
         String output ="";
         int index = 0;
-        for(paramValue p : this.paramValues){
-            output+=("hasParamValue(\"" + this.name + "\",\"" + p.getParent().getName() + "\",\"" + p.getName()+ "\"). ");
+        //sollte sich der Generator die Werte merken??
+        for(Parameter p : this.parameters){
+            output+=("hasParamValue(\"" + this.name + "\",\"" + p.getName() + "\",\"" + this.paramValues.get(index).getName() + "\"). ");
             index++;
         }
         output+='\n';

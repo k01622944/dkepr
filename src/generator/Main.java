@@ -8,7 +8,6 @@ public class Main {
     public static void main(String[] args) {
         String file = "cbr_output.txt";
 
-
         Properties p = new Properties();
         int contexts = p.getamountc();
         int paramCount = p.getamountparam();

@@ -6,19 +6,21 @@ import static generator.cbrgenerator.generateString;
 
 public class Parameter {
 	private static Random random = new Random();
-	String name;
+	String name = "Parameter_" + generateString();
 	List<paramValue> paramValues = new ArrayList<>();
 	List<String> detParamValues = new ArrayList<>();
 	BusinessCase businessCase = new BusinessCase();
+	String descProperty ="";
+
 	
 	public Parameter(){
-		this.name =generateString();
 		for(int i = 0; i<randomWithRange (5,8); i++){
 			paramValues.add(new paramValue(this));
 		}
-		for(int i = 0; i<randomWithRange(1, 4);i++){
+		for(int i = 0; i<5;i++){
 			detParamValues.add(generateString().toUpperCase());
 		}
+		this.descProperty=generateString();
 	}
 
 	public String paramValuesToString(){
@@ -52,9 +54,7 @@ public class Parameter {
 		for(String s : this.detParamValues){
 			paramValue randomParam = this.getRandomParamValue();
 			output+=("detParamValue(" + this.businessCase.getClassName() + ",\"" + this.name + "\",\"" +  s + "\") :- businessCase("+ this.businessCase.getClassName()+"), " +
-					"hasInterestSpec(" + this.businessCase.getClassName() + ", " + this.businessCase.getInterestSpec().getName()+"), " +
-					"hasDescProp(" + this.businessCase.getInterestSpec().getName() +",\""+ this.name +"\"," + randomParam.getName().substring(0,1) + "), " + randomParam.getName().toLowerCase()+"("
-					+ randomParam.getName().substring(0,1)+"), hasDescProp(" + randomParam.getName().substring(0,1)+",\"keineAhnung\"," + s + ").\n");
+					"hasDescProp(" + this.businessCase.getClassName() +",\""+ this.descProperty +"\"," + s + ").\n");
 		}
 		return output;
 	}
@@ -81,4 +81,5 @@ public class Parameter {
 	public BusinessCase getBusinessCase() {
 		return businessCase;
 	}
+
 }

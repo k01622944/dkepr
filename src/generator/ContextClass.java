@@ -54,28 +54,13 @@ public class ContextClass {
 
 	public List<Context> getContexts (int contexts) {
 		this.ctxlist = new ArrayList<>();
+		List<paramValue> paramValues = new ArrayList<>();
 
 		while(ctxlist.size()<contexts){
-			boolean similar = false;
-			Parameter firstParam = params.get(randomWithRange(0,params.size()-1));
-			paramValue firstParamValue = firstParam.getRandomParamValue();
-			Parameter secondParam = params.get(randomWithRange(0,params.size()-1));
-			paramValue secondParamValue = secondParam.getRandomParamValue();
-			Parameter thirdParam = params.get(randomWithRange(0, params.size()-1));
-			paramValue thirdParamValue = thirdParam.getRandomParamValue();
-
-			for(Context c:ctxlist){
-				if(c.isSimilar(firstParamValue, secondParamValue, thirdParamValue)){
-					similar=true;
-					break;
-				}
-			}
-			if(!similar){
-				Context newContext = new Context(firstParamValue,secondParamValue, thirdParamValue);
-				newContext.setName("ctx"+ctxlist.size());
-				newContext.setModule("module" + ctxlist.size());
-				ctxlist.add(newContext);
-			}
+			Context newContext = new Context(this.params);
+			newContext.setName("ctx"+ctxlist.size());
+			newContext.setModule("module" + ctxlist.size());
+			ctxlist.add(newContext);
 		}
 		return this.ctxlist;
 	}
