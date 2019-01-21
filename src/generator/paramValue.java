@@ -14,7 +14,7 @@ public class paramValue {
 	
 	public paramValue(Parameter parent) {
 		this.parent=parent;
-		name = generateString();
+		name = "ParamValue_" + generateString();
 	}
 
 	public paramValue(String n){this.name=n;}

@@ -7,6 +7,7 @@ import static generator.cbrgenerator.randomWithRange;
 
 public class ContextClass {
 	String className ="contextClass";
+	String businessCaseClass = "semNOTAMCASE";
 	List<Parameter> params;
 	String name;
 	List<Context> ctxlist;
@@ -29,7 +30,7 @@ public class ContextClass {
 	}
 
 	public String classNameToString(){
-		return (this.className + "(\"" + this.name + "\").\n");
+		return (this.className + "(\"" + this.name + "\").\n" + "businessCaseClass(\"" + this.businessCaseClass + "\").\n");
 	}
 
 	public String paramsToString(){
@@ -86,6 +87,20 @@ public class ContextClass {
 		for(Parameter p : params){
 			output += p.detParamValueToString();
 		}
+		return output;
+	}
+
+	public String businessCaseToString(){
+		String output ="hasBusinessCaseClass(BC," + this.businessCaseClass + "\") :- businessCase(BC).\n";
+		int index=0;
+		for(int i = 0; i < this.params.size(); i++){
+			for(Parameter p : this.params){
+				output+=("businessCase(\"bc" + index + "\"). hasDescProp(\"bc" + index + "\", \"" + p.getDescProperty() + "\", " + p.getRandomParamValue().getName() + ").\n");
+			}
+			index++;
+			output+='\n';
+		}
+
 		return output;
 	}
 }

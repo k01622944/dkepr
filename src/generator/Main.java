@@ -33,6 +33,7 @@ public class Main {
             outputStream.println(contexClass.paramsToString());
             outputStream.println(contexClass.contextsToString(contexts));
             outputStream.println(contexClass.detParamValuesToString());
+            outputStream.println(contexClass.businessCaseToString());
             outputStream.close();
             System.out.println("done");
         } catch (FileNotFoundException e){
