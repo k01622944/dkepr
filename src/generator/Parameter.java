@@ -8,7 +8,6 @@ public class Parameter {
 	private static Random random = new Random();
 	String name = "Parameter_" + generateString();
 	List<paramValue> paramValues = new ArrayList<>();
-	List<String> detParamValues = new ArrayList<>();
 	BusinessCase businessCase = new BusinessCase();
 	String descProperty ="";
 
@@ -16,9 +15,6 @@ public class Parameter {
 	public Parameter(){
 		for(int i = 0; i<randomWithRange (5,8); i++){
 			paramValues.add(new paramValue(this));
-		}
-		for(int i = 0; i<5;i++){
-			detParamValues.add(generateString().toUpperCase());
 		}
 		this.descProperty=generateString();
 	}
@@ -51,11 +47,9 @@ public class Parameter {
 
 	public String detParamValueToString(){
 		String output ="";
-		for(String s : this.detParamValues){
-			paramValue randomParam = this.getRandomParamValue();
-			output+=("detParamValue(" + this.businessCase.getClassName() + ",\"" + this.name + "\",\"" +  s + "\") :- businessCase("+ this.businessCase.getClassName()+"), " +
-					"hasDescProp(" + this.businessCase.getClassName() +",\""+ this.descProperty +"\"," + s + ").\n");
-		}
+		paramValue randomParam = this.getRandomParamValue();
+		output+=("detParamValue(" + this.businessCase.getClassName() + ",\"" + this.name + "\",\"" + "Val" + "\") :- businessCase("+ this.businessCase.getClassName()+"), " +
+				"hasDescProp(" + this.businessCase.getClassName() +",\"DescProp_"+ this.descProperty +"\"," + "Val" + ").\n");
 		return output;
 	}
 	
@@ -73,9 +67,6 @@ public class Parameter {
 	}
 	public paramValue getRandomParamValue(){
 		return paramValues.get(randomWithRange(0,paramValues.size()-1));
-	}
-	public List<String> getDetParamValues() {
-		return detParamValues;
 	}
 
 	public BusinessCase getBusinessCase() {
