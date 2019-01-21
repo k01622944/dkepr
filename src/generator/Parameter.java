@@ -46,6 +46,7 @@ public class Parameter {
 	}
 
 	public String detParamValueToString(){
+		System.out.println("asdfasdf");
 		String output ="";
 		paramValue randomParam = this.getRandomParamValue();
 		output+=("detParamValue(" + this.businessCase.getClassName() + ",\"" + this.name + "\",\"" + "Val" + "\") :- businessCase("+ this.businessCase.getClassName()+"), " +

@@ -1,75 +1,47 @@
 contextClass("aimCtx").
 
-hasParameter("contextClass","Parameter_Ljlmzv"). 
-hasParameter("contextClass","Parameter_Etyxfu"). 
-hasParameter("contextClass","Parameter_Cydmce"). 
-hasParameter("contextClass","Parameter_Cftsbf"). 
-hasParameter("contextClass","Parameter_Jzvcte"). 
+hasParameter("contextClass","Parameter_Ufswho"). 
+hasParameter("contextClass","Parameter_Gjskym"). 
+hasParameter("contextClass","Parameter_Evwfve"). 
+hasParameter("contextClass","Parameter_Yqvouj"). 
+hasParameter("contextClass","Parameter_Hwkaxd"). 
 
-parameter("Parameter_Ljlmzv").
-parameter("Parameter_Etyxfu").
-parameter("Parameter_Cydmce").
-parameter("Parameter_Cftsbf").
-parameter("Parameter_Jzvcte").
+parameter("Parameter_Ufswho").
+parameter("Parameter_Gjskym").
+parameter("Parameter_Evwfve").
+parameter("Parameter_Yqvouj").
+parameter("Parameter_Hwkaxd").
 
 % -----------------------------------------------------------------------------
 % DEFINING PARAMETERS, PARAMETER VALUES, CONTEXTS, AND DETpARAMvALUE
 % -----------------------------------------------------------------------------
 % Parameter values and their hierarchy
-paramValue("Parameter_Ljlmzv","Mdholy").paramValue("Parameter_Ljlmzv","Buxcxd").paramValue("Parameter_Ljlmzv","Zsklxq").paramValue("Parameter_Ljlmzv","Zcjfls").paramValue("Parameter_Ljlmzv","Ucspgn").paramValue("Parameter_Ljlmzv","Sqpxcl").
-paramValue("Parameter_Etyxfu","Zbajnm").paramValue("Parameter_Etyxfu","Jxnwmx").paramValue("Parameter_Etyxfu","Fhdtnk").paramValue("Parameter_Etyxfu","Grjgtg").paramValue("Parameter_Etyxfu","Mlkeke").paramValue("Parameter_Etyxfu","Cbwoct").
-paramValue("Parameter_Cydmce","Uldhtb").paramValue("Parameter_Cydmce","Zmbmxt").paramValue("Parameter_Cydmce","Nsvzap").paramValue("Parameter_Cydmce","Moiawn").paramValue("Parameter_Cydmce","Tugmzu").paramValue("Parameter_Cydmce","Vwqhhw").paramValue("Parameter_Cydmce","Xobstx").
-paramValue("Parameter_Cftsbf","Yygarg").paramValue("Parameter_Cftsbf","Ejwtqg").paramValue("Parameter_Cftsbf","Bcywyr").paramValue("Parameter_Cftsbf","Cezatx").paramValue("Parameter_Cftsbf","Yiyjnp").paramValue("Parameter_Cftsbf","Sillwx").paramValue("Parameter_Cftsbf","Predha").
-paramValue("Parameter_Jzvcte","Fghamt").paramValue("Parameter_Jzvcte","Fzxjfr").paramValue("Parameter_Jzvcte","Rlidkl").paramValue("Parameter_Jzvcte","Nhxxej").paramValue("Parameter_Jzvcte","Bbnsvo").paramValue("Parameter_Jzvcte","Gnsgqt").paramValue("Parameter_Jzvcte","Sbrtnz").
+paramValue("Parameter_Ufswho","Oshngc").paramValue("Parameter_Ufswho","Zvcbhs").paramValue("Parameter_Ufswho","Itejvj").paramValue("Parameter_Ufswho","Ebxvyc").paramValue("Parameter_Ufswho","Blktcy").paramValue("Parameter_Ufswho","Tozvrg").paramValue("Parameter_Ufswho","Fvbodb").
+paramValue("Parameter_Gjskym","Lpegyo").paramValue("Parameter_Gjskym","Itarwu").paramValue("Parameter_Gjskym","Eyarxn").paramValue("Parameter_Gjskym","Wvjazg").paramValue("Parameter_Gjskym","Rywzvy").paramValue("Parameter_Gjskym","Uokvoj").
+paramValue("Parameter_Evwfve","Sxonvx").paramValue("Parameter_Evwfve","Eelscy").paramValue("Parameter_Evwfve","Hyjdro").paramValue("Parameter_Evwfve","Kkkmlx").paramValue("Parameter_Evwfve","Ykeqrt").paramValue("Parameter_Evwfve","Vvxqco").paramValue("Parameter_Evwfve","Mefgci").
+paramValue("Parameter_Yqvouj","Yjjcma").paramValue("Parameter_Yqvouj","Miybvf").paramValue("Parameter_Yqvouj","Winkbi").paramValue("Parameter_Yqvouj","Ixfhsv").paramValue("Parameter_Yqvouj","Bxjrle").paramValue("Parameter_Yqvouj","Wgubte").
+paramValue("Parameter_Hwkaxd","Nqfwwd").paramValue("Parameter_Hwkaxd","Xpgegn").paramValue("Parameter_Hwkaxd","Jcldtp").paramValue("Parameter_Hwkaxd","Yetacd").paramValue("Parameter_Hwkaxd","Demsva").paramValue("Parameter_Hwkaxd","Faokcm").paramValue("Parameter_Hwkaxd","Vkctyp").paramValue("Parameter_Hwkaxd","Ohpzxn").
 
-covers("Mdholy","Buxcxd"). covers("Mdholy","Zsklxq"). covers("Mdholy","Zcjfls"). covers("Mdholy","Ucspgn"). covers("Mdholy","Sqpxcl"). 
-covers("Zbajnm","Jxnwmx"). covers("Zbajnm","Fhdtnk"). covers("Zbajnm","Grjgtg"). covers("Zbajnm","Mlkeke"). covers("Zbajnm","Cbwoct"). 
-covers("Uldhtb","Zmbmxt"). covers("Uldhtb","Nsvzap"). covers("Uldhtb","Moiawn"). covers("Uldhtb","Tugmzu"). covers("Uldhtb","Vwqhhw"). covers("Uldhtb","Xobstx"). 
-covers("Yygarg","Ejwtqg"). covers("Yygarg","Bcywyr"). covers("Yygarg","Cezatx"). covers("Yygarg","Yiyjnp"). covers("Yygarg","Sillwx"). covers("Yygarg","Predha"). 
-covers("Fghamt","Fzxjfr"). covers("Fghamt","Rlidkl"). covers("Fghamt","Nhxxej"). covers("Fghamt","Bbnsvo"). covers("Fghamt","Gnsgqt"). covers("Fghamt","Sbrtnz"). 
+covers("Oshngc","Zvcbhs"). covers("Oshngc","Itejvj"). covers("Oshngc","Ebxvyc"). covers("Oshngc","Blktcy"). covers("Oshngc","Tozvrg"). covers("Oshngc","Fvbodb"). 
+covers("Lpegyo","Itarwu"). covers("Lpegyo","Eyarxn"). covers("Lpegyo","Wvjazg"). covers("Lpegyo","Rywzvy"). covers("Lpegyo","Uokvoj"). 
+covers("Sxonvx","Eelscy"). covers("Sxonvx","Hyjdro"). covers("Sxonvx","Kkkmlx"). covers("Sxonvx","Ykeqrt"). covers("Sxonvx","Vvxqco"). covers("Sxonvx","Mefgci"). 
+covers("Yjjcma","Miybvf"). covers("Yjjcma","Winkbi"). covers("Yjjcma","Ixfhsv"). covers("Yjjcma","Bxjrle"). covers("Yjjcma","Wgubte"). 
+covers("Nqfwwd","Xpgegn"). covers("Nqfwwd","Jcldtp"). covers("Nqfwwd","Yetacd"). covers("Nqfwwd","Demsva"). covers("Nqfwwd","Faokcm"). covers("Nqfwwd","Vkctyp"). covers("Nqfwwd","Ohpzxn"). 
 
 %Contexts
-context("ctx0"). hasModule("Zsklxq_Cbwoct_Uldhtb_Ejwtqg_Fghamt"). hasModule("ctx0","module0"). hasContextClass("ctx0","aimCtx"). 
-hasParamValue("ctx0","Parameter_Ljlmzv","Zsklxq"). hasParamValue("ctx0","Parameter_Etyxfu","Cbwoct"). hasParamValue("ctx0","Parameter_Cydmce","Uldhtb"). hasParamValue("ctx0","Parameter_Cftsbf","Ejwtqg"). hasParamValue("ctx0","Parameter_Jzvcte","Fghamt"). 
-context("ctx1"). hasModule("Ucspgn_Cbwoct_Zmbmxt_Yygarg_Sbrtnz"). hasModule("ctx1","module1"). hasContextClass("ctx1","aimCtx"). 
-hasParamValue("ctx1","Parameter_Ljlmzv","Ucspgn"). hasParamValue("ctx1","Parameter_Etyxfu","Cbwoct"). hasParamValue("ctx1","Parameter_Cydmce","Zmbmxt"). hasParamValue("ctx1","Parameter_Cftsbf","Yygarg"). hasParamValue("ctx1","Parameter_Jzvcte","Sbrtnz"). 
-context("ctx2"). hasModule("Buxcxd_Grjgtg_Uldhtb_Yygarg_Fzxjfr"). hasModule("ctx2","module2"). hasContextClass("ctx2","aimCtx"). 
-hasParamValue("ctx2","Parameter_Ljlmzv","Buxcxd"). hasParamValue("ctx2","Parameter_Etyxfu","Grjgtg"). hasParamValue("ctx2","Parameter_Cydmce","Uldhtb"). hasParamValue("ctx2","Parameter_Cftsbf","Yygarg"). hasParamValue("ctx2","Parameter_Jzvcte","Fzxjfr"). 
-context("ctx3"). hasModule("Buxcxd_Mlkeke_Xobstx_Yiyjnp_Fzxjfr"). hasModule("ctx3","module3"). hasContextClass("ctx3","aimCtx"). 
-hasParamValue("ctx3","Parameter_Ljlmzv","Buxcxd"). hasParamValue("ctx3","Parameter_Etyxfu","Mlkeke"). hasParamValue("ctx3","Parameter_Cydmce","Xobstx"). hasParamValue("ctx3","Parameter_Cftsbf","Yiyjnp"). hasParamValue("ctx3","Parameter_Jzvcte","Fzxjfr"). 
+context("ctx0"). hasModule("Zvcbhs_Itarwu_Vvxqco_Miybvf_Faokcm"). hasModule("ctx0","module0"). hasContextClass("ctx0","aimCtx"). 
+hasParamValue("ctx0","Parameter_Ufswho","Zvcbhs"). hasParamValue("ctx0","Parameter_Gjskym","Itarwu"). hasParamValue("ctx0","Parameter_Evwfve","Vvxqco"). hasParamValue("ctx0","Parameter_Yqvouj","Miybvf"). hasParamValue("ctx0","Parameter_Hwkaxd","Faokcm"). 
+context("ctx1"). hasModule("Fvbodb_Uokvoj_Kkkmlx_Yjjcma_Jcldtp"). hasModule("ctx1","module1"). hasContextClass("ctx1","aimCtx"). 
+hasParamValue("ctx1","Parameter_Ufswho","Fvbodb"). hasParamValue("ctx1","Parameter_Gjskym","Uokvoj"). hasParamValue("ctx1","Parameter_Evwfve","Kkkmlx"). hasParamValue("ctx1","Parameter_Yqvouj","Yjjcma"). hasParamValue("ctx1","Parameter_Hwkaxd","Jcldtp"). 
+context("ctx2"). hasModule("Tozvrg_Itarwu_Eelscy_Yjjcma_Nqfwwd"). hasModule("ctx2","module2"). hasContextClass("ctx2","aimCtx"). 
+hasParamValue("ctx2","Parameter_Ufswho","Tozvrg"). hasParamValue("ctx2","Parameter_Gjskym","Itarwu"). hasParamValue("ctx2","Parameter_Evwfve","Eelscy"). hasParamValue("ctx2","Parameter_Yqvouj","Yjjcma"). hasParamValue("ctx2","Parameter_Hwkaxd","Nqfwwd"). 
+context("ctx3"). hasModule("Itejvj_Wvjazg_Mefgci_Wgubte_Xpgegn"). hasModule("ctx3","module3"). hasContextClass("ctx3","aimCtx"). 
+hasParamValue("ctx3","Parameter_Ufswho","Itejvj"). hasParamValue("ctx3","Parameter_Gjskym","Wvjazg"). hasParamValue("ctx3","Parameter_Evwfve","Mefgci"). hasParamValue("ctx3","Parameter_Yqvouj","Wgubte"). hasParamValue("ctx3","Parameter_Hwkaxd","Xpgegn"). 
 
  % Determine Parameter Values
-detParamValue(BC,"Parameter_Ljlmzv","VWFUAQ") :- businessCase(BC), hasDescProp(BC,"Wfgdwm",VWFUAQ).
-detParamValue(BC,"Parameter_Ljlmzv","YTLBBQ") :- businessCase(BC), hasDescProp(BC,"Wfgdwm",YTLBBQ).
-detParamValue(BC,"Parameter_Ljlmzv","NAITMI") :- businessCase(BC), hasDescProp(BC,"Wfgdwm",NAITMI).
-detParamValue(BC,"Parameter_Ljlmzv","FZVODP") :- businessCase(BC), hasDescProp(BC,"Wfgdwm",FZVODP).
-detParamValue(BC,"Parameter_Ljlmzv","TGJWDZ") :- businessCase(BC), hasDescProp(BC,"Wfgdwm",TGJWDZ).
-detParamValue(BC,"Parameter_Ljlmzv","YALWKD") :- businessCase(BC), hasDescProp(BC,"Wfgdwm",YALWKD).
-detParamValue(BC,"Parameter_Etyxfu","QNSQNJ") :- businessCase(BC), hasDescProp(BC,"Ftccir",QNSQNJ).
-detParamValue(BC,"Parameter_Etyxfu","LMNSNZ") :- businessCase(BC), hasDescProp(BC,"Ftccir",LMNSNZ).
-detParamValue(BC,"Parameter_Etyxfu","UITDWN") :- businessCase(BC), hasDescProp(BC,"Ftccir",UITDWN).
-detParamValue(BC,"Parameter_Etyxfu","JAIJLP") :- businessCase(BC), hasDescProp(BC,"Ftccir",JAIJLP).
-detParamValue(BC,"Parameter_Etyxfu","QLKNUT") :- businessCase(BC), hasDescProp(BC,"Ftccir",QLKNUT).
-detParamValue(BC,"Parameter_Etyxfu","QHTALL") :- businessCase(BC), hasDescProp(BC,"Ftccir",QHTALL).
-detParamValue(BC,"Parameter_Cydmce","LCASPI") :- businessCase(BC), hasDescProp(BC,"Wgbirv",LCASPI).
-detParamValue(BC,"Parameter_Cydmce","IQWESW") :- businessCase(BC), hasDescProp(BC,"Wgbirv",IQWESW).
-detParamValue(BC,"Parameter_Cydmce","RDWOYQ") :- businessCase(BC), hasDescProp(BC,"Wgbirv",RDWOYQ).
-detParamValue(BC,"Parameter_Cydmce","MXPLMT") :- businessCase(BC), hasDescProp(BC,"Wgbirv",MXPLMT).
-detParamValue(BC,"Parameter_Cydmce","DSKBMN") :- businessCase(BC), hasDescProp(BC,"Wgbirv",DSKBMN).
-detParamValue(BC,"Parameter_Cydmce","WRFIWC") :- businessCase(BC), hasDescProp(BC,"Wgbirv",WRFIWC).
-detParamValue(BC,"Parameter_Cydmce","PRWYSI") :- businessCase(BC), hasDescProp(BC,"Wgbirv",PRWYSI).
-detParamValue(BC,"Parameter_Cftsbf","VHHYQU") :- businessCase(BC), hasDescProp(BC,"Istbdt",VHHYQU).
-detParamValue(BC,"Parameter_Cftsbf","PRCTME") :- businessCase(BC), hasDescProp(BC,"Istbdt",PRCTME).
-detParamValue(BC,"Parameter_Cftsbf","RAVDZC") :- businessCase(BC), hasDescProp(BC,"Istbdt",RAVDZC).
-detParamValue(BC,"Parameter_Cftsbf","KGRLMV") :- businessCase(BC), hasDescProp(BC,"Istbdt",KGRLMV).
-detParamValue(BC,"Parameter_Cftsbf","XIIZFZ") :- businessCase(BC), hasDescProp(BC,"Istbdt",XIIZFZ).
-detParamValue(BC,"Parameter_Cftsbf","OWKKFW") :- businessCase(BC), hasDescProp(BC,"Istbdt",OWKKFW).
-detParamValue(BC,"Parameter_Cftsbf","RFXHIE") :- businessCase(BC), hasDescProp(BC,"Istbdt",RFXHIE).
-detParamValue(BC,"Parameter_Jzvcte","NFMWBM") :- businessCase(BC), hasDescProp(BC,"Qydzkn",NFMWBM).
-detParamValue(BC,"Parameter_Jzvcte","WNRFLX") :- businessCase(BC), hasDescProp(BC,"Qydzkn",WNRFLX).
-detParamValue(BC,"Parameter_Jzvcte","XNFSLU") :- businessCase(BC), hasDescProp(BC,"Qydzkn",XNFSLU).
-detParamValue(BC,"Parameter_Jzvcte","AWTYIX") :- businessCase(BC), hasDescProp(BC,"Qydzkn",AWTYIX).
-detParamValue(BC,"Parameter_Jzvcte","DIWTGL") :- businessCase(BC), hasDescProp(BC,"Qydzkn",DIWTGL).
-detParamValue(BC,"Parameter_Jzvcte","TQVBWX") :- businessCase(BC), hasDescProp(BC,"Qydzkn",TQVBWX).
-detParamValue(BC,"Parameter_Jzvcte","GCTQLR") :- businessCase(BC), hasDescProp(BC,"Qydzkn",GCTQLR).
+detParamValue(BC,"Parameter_Ufswho","Val") :- businessCase(BC), hasDescProp(BC,"DescProp_Kenjrq",Val).
+detParamValue(BC,"Parameter_Gjskym","Val") :- businessCase(BC), hasDescProp(BC,"DescProp_Rlhyfq",Val).
+detParamValue(BC,"Parameter_Evwfve","Val") :- businessCase(BC), hasDescProp(BC,"DescProp_Biijlp",Val).
+detParamValue(BC,"Parameter_Yqvouj","Val") :- businessCase(BC), hasDescProp(BC,"DescProp_Ygcqpp",Val).
+detParamValue(BC,"Parameter_Hwkaxd","Val") :- businessCase(BC), hasDescProp(BC,"DescProp_Lgjjyz",Val).
 
