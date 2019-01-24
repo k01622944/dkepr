@@ -1,12 +1,13 @@
 package generator;
 
+import GUI.generatorGUI;
+
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
 import java.sql.*;
 
 public class Main {
     public static void main(String[] args) {
+        /*
         try{
             Connection con=DriverManager.getConnection(
                     "jdbc:mysql://db4free.net:3306/projektdke","gruppe1","Dke&Inheritance");
@@ -17,27 +18,18 @@ public class Main {
                 System.out.println(rs.getInt(1)+"\t | \t "+rs.getString(2)+"\t\t\t | \t "+rs.getString(3));
             con.close();
         }catch(Exception e){ System.out.println(e);}
+*/
 
+        generatorGUI generatorGUI = new generatorGUI();
 
+//ausgabe
         String file = "cbr_output.txt";
 
         Properties p = new Properties();
         int contexts = p.getamountc();
         int paramCount = p.getamountparam();
 
-        ContextClass contexClass = new ContextClass(paramCount, "aimCtx");
+        ContextClass contexClass = new ContextClass("aimCtx");
 
-        try{
-            PrintWriter outputStream = new PrintWriter(file);
-            outputStream.println(contexClass.classNameToString());
-            outputStream.println(contexClass.paramsToString());
-            outputStream.println(contexClass.contextsToString(contexts));
-            outputStream.println(contexClass.detParamValuesToString());
-            outputStream.println(contexClass.businessCaseToString());
-            outputStream.close();
-            System.out.println("done");
-        } catch (FileNotFoundException e){
-            e.printStackTrace();
-        }
     }
 }

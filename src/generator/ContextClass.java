@@ -1,5 +1,7 @@
 package generator;
 
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,14 +15,24 @@ public class ContextClass {
 	List<Context> ctxlist;
 
 
-	public ContextClass(int paramCount, String name){
+	public ContextClass(String name){
 		this.params = new ArrayList<Parameter>();
-		for(int i = 0; i<paramCount;i++) {
-			params.add(new Parameter());
-			this.name = name;
-		}
+		this.name = name;
 	}
-	
+
+	public String generateCbrData(int parameter, int contexts){
+		String output= classNameToString() + "\n" + paramsToString(parameter) + "\n" + contextsToString(contexts) + "\n" + detParamValuesToString() + "\n" + businessCaseToString();
+		try{
+			PrintWriter outputStream = new PrintWriter("cbr_output.txt");
+			outputStream.println(output);
+			outputStream.close();
+			System.out.println("done");
+		} catch (FileNotFoundException e){
+			e.printStackTrace();
+		}
+		return output;
+	}
+
 	public String getName(){
 		return this.name;
 	}
@@ -33,7 +45,11 @@ public class ContextClass {
 		return (this.className + "(\"" + this.name + "\").\n" + "businessCaseClass(\"" + this.businessCaseClass + "\").\n");
 	}
 
-	public String paramsToString(){
+	public String paramsToString(int paramCount){
+		for(int i = 0; i<paramCount;i++) {
+			params.add(new Parameter());
+		}
+
 		if (this.params==null) return null;
 		String hasParameter = "";
 		String parameter = "";
