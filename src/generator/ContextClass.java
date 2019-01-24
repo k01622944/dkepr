@@ -94,6 +94,7 @@ public class ContextClass {
 			output+=(" hasContextClass(\"" + c.getName() + "\",\"" + this.getName()+"\"). \n");
 			output+= c.hasParameterToString();
 			contextIndex++;
+
 		}
 		return output;
 	}
@@ -107,11 +108,12 @@ public class ContextClass {
 	}
 
 	public String businessCaseToString(){
-		String output ="hasBusinessCaseClass(BC," + this.businessCaseClass + "\") :- businessCase(BC).\n";
+		//String output ="hasBusinessCaseClass(BC," + this.businessCaseClass + "\") :- businessCase(BC).\n";
+		String output = "";
 		int index=0;
 		for(int i = 0; i < this.params.size(); i++){
 			for(Parameter p : this.params){
-				output+=("businessCase(\"bc" + index + "\"). hasDescProp(\"bc" + index + "\", \"" + p.getDescProperty() + "\", " + p.getRandomParamValue().getName() + ").\n");
+				output+=("businessCase(\"bc" + index + "\"). hasDescProp(\"bc" + index + "\", \"" + p.getDescProperty() + "\", \"" + p.getRandomParamValue().getName() + "\").\n");
 			}
 			index++;
 			output+='\n';

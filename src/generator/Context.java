@@ -28,7 +28,7 @@ public class Context {
     }
 
     public String hasNameToString(){
-        String str = "";
+        String str = this.name + "\",\"";
         int i = 0;
         for(paramValue p : this.paramValues) {
             if(i<this.paramValues.size()-1){
@@ -38,7 +38,7 @@ public class Context {
             }
             i++;
         }
-        return (" hasModule(\"" + str);
+        return (" hasName(\"" + str);
     }
 
     public String hasModuleToString(){
