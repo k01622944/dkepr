@@ -12,7 +12,8 @@ public class Parameter {
 
 	
 	public Parameter(){
-		for(int i = 0; i<randomWithRange (5,8); i++){
+		Properties p = new Properties();
+		for(int i = 0; i<p.getamountparamvalues(); i++){
 			paramValues.add(new paramValue(this));
 		}
 		this.descProperty="DescProp_" + generateString();

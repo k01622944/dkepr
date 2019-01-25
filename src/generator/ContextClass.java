@@ -20,7 +20,7 @@ public class ContextClass {
 		this.name = name;
 	}
 
-	public String generateCbrData(int parameter, int contexts){
+	public String generateCbrData(int parameter, int contexts, int paramValues){
 		String output= classNameToString() + "\n" + paramsToString(parameter) + "\n" + contextsToString(contexts) + "\n" + detParamValuesToString() + "\n" + businessCaseToString();
 		try{
 			PrintWriter outputStream = new PrintWriter("cbr_output.txt");

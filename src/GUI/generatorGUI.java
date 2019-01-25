@@ -25,6 +25,8 @@ public class generatorGUI {
     private JLabel paramLabel;
     private JLabel contextLabel;
     private JTextField contextTextField;
+    private JLabel paramValuesLabel;
+    private JTextField paramValuesField;
 
 
     private JTabbedPane tabs = new JTabbedPane();
@@ -42,11 +44,13 @@ public class generatorGUI {
         generator.setResizable(true);
         initComponents();
         cbrPanel.setLayout(new FlowLayout());
-        cbrEntryPanel.setLayout(new GridLayout(2,2));
+        cbrEntryPanel.setLayout(new GridLayout(3,3));
         cbrEntryPanel.add(paramLabel);
         cbrEntryPanel.add(paramTextField);
         cbrEntryPanel.add(contextLabel);
         cbrEntryPanel.add(contextTextField);
+        cbrEntryPanel.add(paramValuesLabel);
+        cbrEntryPanel.add(paramValuesField);
         cbrPanel.add(cbrEntryPanel);
         cbrPanel.add(this.generateButtonCbr);
         cbrPanel.add(resultsCbrPane);
@@ -66,6 +70,8 @@ public class generatorGUI {
         this.generateButtonInheritance = new JButton("Daten für Inheritance generieren");
         this.paramTextField = new JTextField(8);
         this.contextTextField=new JTextField(8);
+        this.paramValuesField= new JTextField(8);
+        this.paramValuesLabel=new JLabel("Anzahl der ParameterValues:");
         this.contextLabel = new JLabel( "Anzahl der Kontexte:" ) ;
         this.paramLabel = new JLabel( "Anzahl der Parameter: " ) ;
         resultsCbr.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
@@ -78,8 +84,9 @@ public class generatorGUI {
              public void actionPerformed(ActionEvent e) {
                  int params = Integer.parseInt(paramTextField.getText());
                  int contexts = Integer.parseInt(contextTextField.getText());
+                 int paramValues = Integer.parseInt(paramValuesField.getText());
                  ContextClass cbr = new ContextClass("aimCtx");
-                 cbr.generateCbrData(params, contexts);
+                 cbr.generateCbrData(params, contexts, paramValues);
              }
          });
     }

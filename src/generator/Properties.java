@@ -7,6 +7,7 @@ public class Properties {
 
     int amountc;
     int amountparam;
+    int amountparamvalues;
 
     public Properties(){
         String text = readString("config.txt");
@@ -18,6 +19,9 @@ public class Properties {
             }
             if(words[i].matches("Parameter")){
                 this.amountparam = Integer.parseInt(words[i+2]);
+            }
+            if(words[i].matches("ParameterValues")){
+                this.amountparamvalues = Integer.parseInt(words[i+2]);
             }
         }
 
@@ -66,5 +70,8 @@ public class Properties {
     }
     public int getamountparam(){
         return this.amountparam;
+    }
+    public int getamountparamvalues(){
+        return this.amountparamvalues;
     }
 }
