@@ -43,12 +43,13 @@ public class cbrGUI extends JFrame{
         int contexts = p.getamountc();
         int paramCount = p.getamountparam();
         int paramValues = p.getamountparamvalues();
+        int runsCount = p.getRuns();
 
         ContextClass contexClass = new ContextClass( "aimCtx");
 
         try{
             PrintWriter outputStream = new PrintWriter(file);
-            outputStream.println(contexClass.generateCbrData(paramCount,contexts,paramValues));
+            outputStream.println(contexClass.generateCbrData(paramCount,contexts,paramValues,runsCount));
             outputStream.close();
             System.out.println("done");
         } catch (FileNotFoundException e){

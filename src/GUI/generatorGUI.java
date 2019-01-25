@@ -27,6 +27,8 @@ public class generatorGUI {
     private JTextField contextTextField;
     private JLabel paramValuesLabel;
     private JTextField paramValuesField;
+    private JLabel runsLabel;
+    private JTextField runsTextField;
 
 
     private JTabbedPane tabs = new JTabbedPane();
@@ -44,13 +46,15 @@ public class generatorGUI {
         generator.setResizable(true);
         initComponents();
         cbrPanel.setLayout(new FlowLayout());
-        cbrEntryPanel.setLayout(new GridLayout(3,3));
+        cbrEntryPanel.setLayout(new GridLayout(4,4));
         cbrEntryPanel.add(paramLabel);
         cbrEntryPanel.add(paramTextField);
         cbrEntryPanel.add(contextLabel);
         cbrEntryPanel.add(contextTextField);
         cbrEntryPanel.add(paramValuesLabel);
         cbrEntryPanel.add(paramValuesField);
+        cbrEntryPanel.add(runsLabel);
+        cbrEntryPanel.add(runsTextField);
         cbrPanel.add(cbrEntryPanel);
         cbrPanel.add(this.generateButtonCbr);
         cbrPanel.add(resultsCbrPane);
@@ -74,6 +78,8 @@ public class generatorGUI {
         this.paramValuesLabel=new JLabel("Anzahl der ParameterValues:");
         this.contextLabel = new JLabel( "Anzahl der Kontexte:" ) ;
         this.paramLabel = new JLabel( "Anzahl der Parameter: " ) ;
+        this.runsLabel = new JLabel("Anzahl der Runs:");
+        this.runsTextField= new JTextField(8);
         resultsCbr.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
         resultsCbr = fillTable("select * from CBR_Performance");
         resizeColumnWidth(resultsCbr);
@@ -85,8 +91,11 @@ public class generatorGUI {
                  int params = Integer.parseInt(paramTextField.getText());
                  int contexts = Integer.parseInt(contextTextField.getText());
                  int paramValues = Integer.parseInt(paramValuesField.getText());
+                 int runs = Integer.parseInt(runsTextField.getText());
                  ContextClass cbr = new ContextClass("aimCtx");
-                 cbr.generateCbrData(params, contexts, paramValues);
+                 for(int i = 1; i<runs;i++) {
+                     cbr.generateCbrData(params, contexts, paramValues, runs);
+                 }
              }
          });
     }

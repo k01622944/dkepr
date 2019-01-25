@@ -8,6 +8,7 @@ public class Properties {
     int amountc;
     int amountparam;
     int amountparamvalues;
+    int amountruns;
 
     public Properties(){
         String text = readString("config.txt");
@@ -22,6 +23,9 @@ public class Properties {
             }
             if(words[i].matches("ParameterValues")){
                 this.amountparamvalues = Integer.parseInt(words[i+2]);
+            }
+            if(words[i].matches("Runs")){
+                this.amountruns = Integer.parseInt(words[i+2]);
             }
         }
 
@@ -73,5 +77,8 @@ public class Properties {
     }
     public int getamountparamvalues(){
         return this.amountparamvalues;
+    }
+    public int getRuns(){
+        return this.amountruns;
     }
 }

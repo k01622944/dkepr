@@ -20,17 +20,18 @@ public class ContextClass {
 		this.name = name;
 	}
 
-	public String generateCbrData(int parameter, int contexts, int paramValues){
-		String output= classNameToString() + "\n" + paramsToString(parameter) + "\n" + contextsToString(contexts) + "\n" + detParamValuesToString() + "\n" + businessCaseToString();
-		try{
-			PrintWriter outputStream = new PrintWriter("cbr_output.txt");
-			outputStream.println(output);
-			outputStream.close();
-			System.out.println("done");
-		} catch (FileNotFoundException e){
-			e.printStackTrace();
-		}
-		return output;
+	public String generateCbrData(int parameter, int contexts, int paramValues, int runs) {
+		//Properties p = new Properties();
+			String output = classNameToString() + "\n" + paramsToString(parameter) + "\n" + contextsToString(contexts) + "\n" + detParamValuesToString() + "\n" + businessCaseToString();
+			try {
+				PrintWriter outputStream = new PrintWriter("cbr_output.txt");
+				outputStream.println(output);
+				outputStream.close();
+				System.out.println("done");
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}
+			return output;
 	}
 
 	public String getName(){

@@ -29,6 +29,7 @@ public class Main {
         int contexts = p.getamountc();
         int paramCount = p.getamountparam();
         int paramValuesCount = p.getamountparamvalues();
+        int runs = p.getRuns();
 
         ContextClass contexClass = new ContextClass("aimCtx");
 
