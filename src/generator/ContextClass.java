@@ -21,8 +21,7 @@ public class ContextClass {
 	}
 
 	public String generateCbrData(int parameter, int contexts, int paramValues, int runs) {
-		//Properties p = new Properties();
-			String output = classNameToString() + "\n" + paramsToString(parameter) + "\n" + contextsToString(contexts) + "\n" + detParamValuesToString() + "\n" + businessCaseToString();
+			String output = classNameToString() + "\n" + paramsToString(parameter,paramValues) + "\n" + contextsToString(contexts) + "\n" + detParamValuesToString() + "\n" + businessCaseToString();
 			try {
 				PrintWriter outputStream = new PrintWriter("cbr_output.txt");
 				outputStream.println(output);
@@ -46,9 +45,9 @@ public class ContextClass {
 		return (this.className + "(\"" + this.name + "\").\n" + "businessCaseClass(\"" + this.businessCaseClass + "\").\n");
 	}
 
-	public String paramsToString(int paramCount){
+	public String paramsToString(int paramCount, int paramV){
 		for(int i = 0; i<paramCount;i++) {
-			params.add(new Parameter());
+			params.add(new Parameter(paramV));
 		}
 
 		if (this.params==null) return null;

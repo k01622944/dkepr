@@ -2,13 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="337ad04e-59f9-40b8-a6bb-967db8e37625" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cbr_output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cbr_output.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.txt" beforeDir="false" afterPath="$PROJECT_DIR$/config.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dkepr/GUI/generatorGUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dkepr/GUI/generatorGUI$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dkepr/generator/ContextClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dkepr/generator/ContextClass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dkepr/generator/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dkepr/generator/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dkepr/generator/Notam.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dkepr/generator/Parameter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dkepr/generator/Parameter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dkepr/generator/Properties.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dkepr/generator/cbrGUI$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dkepr/generator/cbrGUI.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/generatorGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/generatorGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/generator/ContextClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/generator/ContextClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/generator/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/generator/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generator/Properties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/generator/Properties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generator/cbrGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/generator/cbrGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generator/Notam.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generator/Parameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/generator/Parameter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generator/Properties.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generator/cbrGUI.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,15 +58,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/generator/ContextClass.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/GUI/generatorGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
+            <state relative-caret-position="374">
+              <caret line="97" column="14" selection-start-line="97" selection-start-column="14" selection-end-line="97" selection-end-column="14" />
               <folding>
-                <element signature="e#1070#1071#0" expanded="true" />
-                <element signature="e#1093#1094#0" expanded="true" />
-                <element signature="e#1132#1133#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -65,20 +73,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/generator/Parameter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/GUI/generatorGUI.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="98" selection-start-line="98" selection-end-line="98" />
+            <state relative-caret-position="272">
+              <caret line="16" column="9" lean-forward="true" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -87,13 +83,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/generator/cbrGUI.java">
+        <entry file="file://$PROJECT_DIR$/src/generator/ContextClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="-272">
+              <caret line="28" column="43" lean-forward="true" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -135,20 +128,20 @@
         <option value="$PROJECT_DIR$/src/generator/DatabaseConnector.java" />
         <option value="$PROJECT_DIR$/src/generator/DbUtils.java" />
         <option value="$PROJECT_DIR$/src/generator/Context.java" />
-        <option value="$PROJECT_DIR$/src/generator/Parameter.java" />
         <option value="$PROJECT_DIR$/config.txt" />
         <option value="$PROJECT_DIR$/src/generator/Properties.java" />
-        <option value="$PROJECT_DIR$/src/generator/Main.java" />
         <option value="$PROJECT_DIR$/src/generator/cbrGUI.java" />
+        <option value="$PROJECT_DIR$/src/generator/Main.java" />
+        <option value="$PROJECT_DIR$/src/generator/Parameter.java" />
         <option value="$PROJECT_DIR$/src/generator/ContextClass.java" />
         <option value="$PROJECT_DIR$/src/GUI/generatorGUI.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="948" />
-    <option name="width" value="981" />
-    <option name="height" value="969" />
+    <option name="x" value="632" />
+    <option name="width" value="654" />
+    <option name="height" value="646" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -202,7 +195,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548426218796" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548433439336" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -295,17 +288,18 @@
       <workItem from="1548319492970" duration="2720000" />
       <workItem from="1548402935184" duration="1473000" />
       <workItem from="1548404530648" duration="1260000" />
-      <workItem from="1548410920750" duration="5252000" />
+      <workItem from="1548410920750" duration="8165000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80122000" />
+    <option name="totallyTimeSpent" value="83035000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2680162" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17643923" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="3" />
@@ -314,8 +308,8 @@
       <window_info id="Image Layers" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32946146" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.25044405" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39786857" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.15276273" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39786857" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -373,18 +367,6 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/GUI/generatorGUI.java</url>
-          <line>94</line>
-          <properties />
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/generator/InterestSpec.java" />
     <entry file="file://$PROJECT_DIR$/src/generator/Notam.java">
@@ -425,36 +407,15 @@
     <entry file="das://table:/c520feb9/c79b9f9f-6ff1-4e51-8297-f1205e6e5dea/projektdke.CBR_Performance" />
     <entry file="file://$PROJECT_DIR$/src/generator/BusinessCase.java" />
     <entry file="file://$PROJECT_DIR$/src/generator/DatabaseConnector.java" />
-    <entry file="file://$PROJECT_DIR$/src/generator/DbUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/javax/swing/plaf/basic/BasicButtonListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="251" selection-start-line="251" selection-end-line="251" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cbr_output.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/awt/event/ActionListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
           <caret line="49" column="16" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="16" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/generator/cbrGUI.java">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/config.txt">
       <provider selected="true" editor-type-id="text-editor">
@@ -463,10 +424,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/generator/Properties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/generator/cbrgenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
+        <state relative-caret-position="85">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/generator/Context.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/generator/DbUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/generator/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="25" column="39" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -477,41 +469,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/generator/cbrGUI.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/javax/swing/plaf/basic/BasicButtonListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/generator/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/generator/Properties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/generator/Context.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-136">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        <state relative-caret-position="252">
+          <caret line="251" selection-start-line="251" selection-end-line="251" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/generator/Parameter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+        <state relative-caret-position="272">
+          <caret line="16" column="9" lean-forward="true" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -520,20 +488,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/generator/ContextClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
-          <folding>
-            <element signature="e#1070#1071#0" expanded="true" />
-            <element signature="e#1093#1094#0" expanded="true" />
-            <element signature="e#1132#1133#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-272">
+          <caret line="28" column="43" lean-forward="true" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cbr_output.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/generatorGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="98" selection-start-line="98" selection-end-line="98" />
+        <state relative-caret-position="374">
+          <caret line="97" column="14" selection-start-line="97" selection-start-column="14" selection-end-line="97" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

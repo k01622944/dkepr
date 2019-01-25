@@ -25,12 +25,6 @@ public class Main {
 //ausgabe
         String file = "cbr_output.txt";
 
-        Properties p = new Properties();
-        int contexts = p.getamountc();
-        int paramCount = p.getamountparam();
-        int paramValuesCount = p.getamountparamvalues();
-        int runs = p.getRuns();
-
         ContextClass contexClass = new ContextClass("aimCtx");
 
     }

@@ -88,13 +88,13 @@ public class generatorGUI {
         this.generateButtonCbr.addActionListener(new ActionListener() {
              @Override
              public void actionPerformed(ActionEvent e) {
-                 int params = Integer.parseInt(paramTextField.getText());
-                 int contexts = Integer.parseInt(contextTextField.getText());
-                 int paramValues = Integer.parseInt(paramValuesField.getText());
+                 int paramCount = Integer.parseInt(paramTextField.getText());
+                 int contextCount = Integer.parseInt(contextTextField.getText());
+                 int paramValuesCount = Integer.parseInt(paramValuesField.getText());
                  int runs = Integer.parseInt(runsTextField.getText());
-                 ContextClass cbr = new ContextClass("aimCtx");
-                 for(int i = 1; i<runs;i++) {
-                     cbr.generateCbrData(params, contexts, paramValues, runs);
+                 for (int i = 0; i < runs; i++) {
+                     ContextClass cbr = new ContextClass("aimCtx");
+                     cbr.generateCbrData(paramCount, contextCount, paramCount, runs);
                  }
              }
          });

@@ -11,9 +11,8 @@ public class Parameter {
 	String descProperty ="";
 
 	
-	public Parameter(){
-		Properties p = new Properties();
-		for(int i = 0; i<p.getamountparamvalues(); i++){
+	public Parameter(int paramValuesCount){
+		for(int i = 0; i<paramValuesCount; i++){
 			paramValues.add(new paramValue(this));
 		}
 		this.descProperty="DescProp_" + generateString();
