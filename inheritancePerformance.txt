@@ -1,0 +1,166 @@
+0.er Durchgang:
+
+program("mixed").
+hasRule("mixed", "mixed:0").
+rule("mixed:0").
+hasPositiveHeadAtom("mixed:0", "mixed:1").
+relationalAtom("mixed:1").
+hasName("mixed:1", "ZOTWE").
+hasArgument("mixed:1","mixed:2",0).
+term("mixed:2").
+hasSerialization("mixed:2","P").
+hasArgument("mixed:1","mixed:3",1).
+term("mixed:3").
+hasSerialization("mixed:3","D").
+hasArgument("mixed:1","mixed:4",2).
+term("mixed:4").
+hasSerialization("mixed:4","U").
+hasPositiveBodyAtom("mixed:0", "mixed:5").
+relationalAtom("mixed:5").
+hasName("mixed:5", "QIOPA").
+hasArgument("mixed:5","mixed:6",0).
+term("mixed:6").
+hasSerialization("mixed:6","P").
+hasArgument("mixed:5","mixed:7",1).
+term("mixed:7").
+hasSerialization("mixed:7","D").
+hasArgument("mixed:5","mixed:8",2).
+term("mixed:8").
+hasSerialization("mixed:8","U").
+hasArgument("mixed:5","mixed:9",3).
+term("mixed:9").
+hasSerialization("mixed:9","B").
+hasPositiveBodyAtom("mixed:0", "mixed:10").
+relationalAtom("mixed:10").
+hasName("mixed:10", "JBAYJ").
+hasArgument("mixed:10","mixed:11",0).
+term("mixed:11").
+hasSerialization("mixed:11","X").
+hasAnnotation("mixed:0","mixed:12").
+annotation("mixed:12").
+hasName("mixed:12","label").
+hasArgument("mixed:12","mixed:13",0).
+term("mixed:13").hasSerialization("mixed:13","""UNOBC""").
+hasRule("mixed", "mixed:14").
+rule("mixed:14").
+hasPositiveHeadAtom("mixed:0", "mixed:15").
+relationalAtom("mixed:15").
+hasName("mixed:15", "XBEMV").
+hasArgument("mixed:15","mixed:16",0).
+term("mixed:16").
+hasSerialization("mixed:16","N").
+hasArgument("mixed:15","mixed:17",1).
+term("mixed:17").
+hasSerialization("mixed:17","K").
+hasPositiveBodyAtom("mixed:0","mixed:18").
+nonRelationalAtom("mixed:18").
+hasSerialization("mixed:18","N<98022").
+hasPositiveBodyAtom("mixed:0","mixed:19").
+nonRelationalAtom("mixed:19").
+hasSerialization("mixed:19","K<15211").
+hasAnnotation("mixed:14","mixed:20").
+annotation("mixed:20").
+hasName("mixed:20","label").
+hasArgument("mixed:20","mixed:21",0).
+term("mixed:21").hasSerialization("mixed:21","""FDWUR""").
+hasFact("mixed:0", "mixed:22").
+relationalAtom("mixed:22").
+hasName("mixed:22", "QIOPA").
+hasArgument("mixed:22","mixed:23",0).
+term("mixed:23").
+hasSerialization("mixed:23","""PB""").
+hasFact("mixed:0", "mixed:24").
+relationalAtom("mixed:24").
+hasName("mixed:24", "JBAYJ").
+hasArgument("mixed:24","mixed:25",0).
+term("mixed:25").
+hasSerialization("mixed:25","""PH""").
+hasFact("mixed:0", "mixed:26").
+relationalAtom("mixed:26").
+hasName("mixed:26", "QIOPA").
+hasArgument("mixed:26","mixed:27",0).
+term("mixed:27").
+hasSerialization("mixed:27","""LW""").
+hasAnnotation("mixed","mixed:28").
+annotation("mixed:28").
+hasName("mixed:28","module").
+hasArgument("mixed:28","mixed:29",0).
+term("mixed:29").hasSerialization("mixed:29","""RLFI""").
+
+
+1.er Durchgang:
+
+program("mixed").
+hasRule("mixed", "mixed:0").
+rule("mixed:0").
+hasPositiveHeadAtom("mixed:0", "mixed:1").
+relationalAtom("mixed:1").
+hasName("mixed:1", "UOSNQ").
+hasArgument("mixed:1","mixed:2",0).
+term("mixed:2").
+hasSerialization("mixed:2","T").
+hasArgument("mixed:1","mixed:3",1).
+term("mixed:3").
+hasSerialization("mixed:3","P").
+hasPositiveBodyAtom("mixed:0","mixed:4").
+nonRelationalAtom("mixed:4").
+hasSerialization("mixed:4","T<24781").
+hasPositiveBodyAtom("mixed:0","mixed:5").
+nonRelationalAtom("mixed:5").
+hasSerialization("mixed:5","P<91274").
+hasAnnotation("mixed:0","mixed:6").
+annotation("mixed:6").
+hasName("mixed:6","label").
+hasArgument("mixed:6","mixed:7",0).
+term("mixed:7").hasSerialization("mixed:7","""DOOET""").
+hasRule("mixed", "mixed:8").
+rule("mixed:8").
+hasPositiveHeadAtom("mixed:0", "mixed:9").
+relationalAtom("mixed:9").
+hasName("mixed:9", "GTFIC").
+hasArgument("mixed:9","mixed:10",0).
+term("mixed:10").
+hasSerialization("mixed:10","B").
+hasArgument("mixed:9","mixed:11",1).
+term("mixed:11").
+hasSerialization("mixed:11","M").
+hasPositiveBodyAtom("mixed:0", "mixed:12").
+relationalAtom("mixed:12").
+hasName("mixed:12", "TYXUM").
+hasArgument("mixed:12","mixed:13",0).
+term("mixed:13").
+hasSerialization("mixed:13","B").
+hasArgument("mixed:12","mixed:14",1).
+term("mixed:14").
+hasSerialization("mixed:14","M").
+hasAnnotation("mixed:8","mixed:15").
+annotation("mixed:15").
+hasName("mixed:15","label").
+hasArgument("mixed:15","mixed:16",0).
+term("mixed:16").hasSerialization("mixed:16","""TZRWQ""").
+hasFact("mixed:0", "mixed:17").
+relationalAtom("mixed:17").
+hasName("mixed:17", "TYXUM").
+hasArgument("mixed:17","mixed:18",0).
+term("mixed:18").
+hasSerialization("mixed:18","""TE""").
+hasFact("mixed:0", "mixed:19").
+relationalAtom("mixed:19").
+hasName("mixed:19", "TYXUM").
+hasArgument("mixed:19","mixed:20",0).
+term("mixed:20").
+hasSerialization("mixed:20","""UW""").
+hasFact("mixed:0", "mixed:21").
+relationalAtom("mixed:21").
+hasName("mixed:21", "TYXUM").
+hasArgument("mixed:21","mixed:22",0).
+term("mixed:22").
+hasSerialization("mixed:22","""HB""").
+hasAnnotation("mixed","mixed:23").
+annotation("mixed:23").
+hasName("mixed:23","inherits").
+hasArgument("mixed:23","mixed:24",0).
+term("mixed:24").hasSerialization("mixed:24","""LZKX""").
+
+
+

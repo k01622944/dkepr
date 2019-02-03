@@ -16,6 +16,7 @@ import java.awt.event.ActionListener;
 import java.sql.*;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
+import generator_inheritance.*;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
@@ -156,6 +157,31 @@ public class generatorGUI {
              }
          });
 
+        this.generateButtonInheritance.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                int ruleCount = Integer.parseInt(regelTextField.getText());
+                int factCount = Integer.parseInt(factsTextField.getText());
+                int annotationsCount = Integer.parseInt(annotationTextField.getText());
+                int runs = Integer.parseInt(runsTextFieldI.getText());
+
+                InheritanceApp app = new InheritanceApp();
+                String time = app.testInheritance(ruleCount, factCount, annotationsCount, runs);
+                String[] splitted = time.split(";");
+                String totalTime = splitted[0];
+                String avgTime = splitted[1];
+
+
+                addData("select * from Inheritance_Performance","INSERT INTO Inheritance_Performance VALUES(NULL," + ruleCount + "," + factCount + "," + annotationsCount +
+                        "," + runs + ",'" + totalTime + "','" + avgTime + "', SYSDATE())");
+
+                        refreshTableInheritance();
+
+
+            }
+        });
+
     }
 
     public JTable fillTable(String Query) {
@@ -247,6 +273,22 @@ public class generatorGUI {
         resultsCbr.setModel(DbUtils.resultSetToTableModel(rs));
         pstmt.close();
         rs.close();
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+    public void refreshTableInheritance() {
+        Connection con = null;
+
+        try{
+            String query="select * from Inheritance_Performance";
+            con= DriverManager.getConnection(
+                    "jdbc:mysql://db4free.net:3306/projektdke","gruppe1","Dke&Inheritance");
+            PreparedStatement pstmt = con.prepareStatement(query);
+            ResultSet rs = pstmt.executeQuery();
+            resultsI.setModel(DbUtils.resultSetToTableModelInheritance(rs));
+            pstmt.close();
+            rs.close();
         } catch (Exception e){
             e.printStackTrace();
         }
