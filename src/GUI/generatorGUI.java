@@ -24,8 +24,11 @@ public class generatorGUI {
     JPanel cbrPanel = new JPanel();
     JPanel cbrEntryPanel = new JPanel();
     JPanel inheritancePanel = new JPanel();
+    JPanel inheritanceEntryPanel = new JPanel();
     JTable resultsCbr = new JTable();
     JScrollPane resultsCbrPane;
+    JTable resultsI = new JTable();
+    JScrollPane resultsIPane;
     private JButton generateButtonCbr ;
     private JButton generateButtonInheritance ;
     private JTextField paramTextField;
@@ -36,6 +39,14 @@ public class generatorGUI {
     private JTextField paramValuesField;
     private JLabel runsLabel;
     private JTextField runsTextField;
+    private JTextField factsTextField;
+    private JLabel regelLabel;
+    private JLabel factsLabel;
+    private JTextField regelTextField;
+    private JLabel annotationLabelField;
+    private JTextField annotationTextField;
+    private JLabel runsLabelI;
+    private JTextField runsTextFieldI;
 
 
     private JTabbedPane tabs = new JTabbedPane();
@@ -62,6 +73,18 @@ public class generatorGUI {
         cbrEntryPanel.add(paramValuesField);
         cbrEntryPanel.add(runsLabel);
         cbrEntryPanel.add(runsTextField);
+        inheritancePanel.setLayout(new FlowLayout());
+        inheritanceEntryPanel.setLayout(new GridLayout(4,4));
+        inheritanceEntryPanel.add(factsLabel);
+        inheritanceEntryPanel.add(factsTextField);
+        inheritanceEntryPanel.add(regelLabel);
+        inheritanceEntryPanel.add(regelTextField);
+        inheritanceEntryPanel.add(annotationLabelField);
+        inheritanceEntryPanel.add(annotationTextField);
+        inheritanceEntryPanel.add(runsLabelI);
+        inheritanceEntryPanel.add(runsTextFieldI);
+        inheritancePanel.add(inheritanceEntryPanel);
+        inheritancePanel.add(resultsIPane);
         cbrPanel.add(cbrEntryPanel);
         cbrPanel.add(this.generateButtonCbr);
         cbrPanel.add(resultsCbrPane);
@@ -87,6 +110,19 @@ public class generatorGUI {
         this.paramLabel = new JLabel( "Anzahl der Parameter: " ) ;
         this.runsLabel = new JLabel("Anzahl der Runs:");
         this.runsTextField= new JTextField(8);
+        this.generateButtonInheritance = new JButton("Daten für Inheritance generieren");
+        this.factsTextField = new JTextField(8);
+        this.regelTextField=new JTextField(8);
+        this.annotationTextField= new JTextField(8);
+        this.regelLabel=new JLabel("Anzahl der Rules:");
+        this.runsLabelI = new JLabel( "Anzahl der Runs:" ) ;
+        this.factsLabel = new JLabel( "Anzahl der Facts: " ) ;
+        this.annotationLabelField = new JLabel("Anzahl der Annotations:");
+        this.runsTextFieldI= new JTextField(8);
+        resultsI.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
+        resultsI = fillTableInheritance("select * from Inheritance_Performance");
+        resizeColumnWidth(resultsI);
+        resultsIPane = new JScrollPane(resultsI);
         resultsCbr.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
         resultsCbr = fillTable("select * from CBR_Performance");
         resizeColumnWidth(resultsCbr);
@@ -135,6 +171,27 @@ public class generatorGUI {
         rs.close();
         stmt.close();
         connection.close();
+
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+        return table;
+
+    }
+
+    public JTable fillTableInheritance(String Query) {
+        JTable table = null;
+        try {
+            Connection connection= DriverManager.getConnection(
+                    "jdbc:mysql://db4free.net:3306/projektdke","gruppe1","Dke&Inheritance");
+            Statement stmt=connection.createStatement();
+            ResultSet rs=stmt.executeQuery(Query);
+
+            table = new JTable(DbUtils.resultSetToTableModelInheritance(rs));
+
+            rs.close();
+            stmt.close();
+            connection.close();
 
         } catch (Exception e){
             e.printStackTrace();
