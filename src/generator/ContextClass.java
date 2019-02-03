@@ -21,7 +21,8 @@ public class ContextClass {
 	}
 
 	public String generateCbrData(int parameter, int contexts, int paramValues, int runs) {
-			String output = classNameToString() + "\n" + paramsToString(parameter,paramValues) + "\n" + contextsToString(contexts) + "\n" + detParamValuesToString() + "\n" + businessCaseToString();
+			String output = classNameToString() + "\n" + paramsToString(parameter,paramValues) + "\n" + contextsToString(contexts) + "\n" +
+							detParamValuesToString() + "\n" + businessCaseToString() + "\n" + staticCode();
 			try {
 				PrintWriter outputStream = new PrintWriter("cbr_output.txt");
 				outputStream.println(output);
@@ -121,4 +122,44 @@ public class ContextClass {
 
 		return output;
 	}
+	public String staticCode(){
+		String output = "% -----------------------------------------------------------------------------\n" +
+				"% DERIVING RELATIONSHIPS OF PARAM VALUES AND CONTEXTS\n" +
+				"% -----------------------------------------------------------------------------\n" +
+				"% transitive and transitive-reflexive covers\n" +
+				"tCovers(Pval,Cval) :- tCovers(Pval,X), covers(X,Cval).\n" +
+				"tCovers(Pval,Cval) :- covers(Pval,Cval).\n" +
+				"trCovers(Pval,Cval) :- tCovers(Pval,Cval). trCovers(Pval,Pval):- paramValue(_,Pval).\n" +
+				"\n" +
+				"% Context Hierarchy\n" +
+				"paramCover(P,C,Param):- hasParamValue(C,Param,Pval), hasParamValue(P,Param,Pval2), trCovers(Pval2,Pval).\n" +
+				"notParamCover(C,P,Param):- context(C), hasContextClass(C,CtxCl), hasParameter(CtxCl,Param), context(P), not paramCover(C,P,Param).\n" +
+				"ctxInherits(C,P) :- paramCover(P,C,_), not notParamCover(P,C,_).\n";
+		output += '\n';
+		output += '\n';
+		output += "% -----------------------------------------------------------------------------\n" +
+				"% DETERMINE RELEVANT CONTEXTS AND THE MOST SPECIFIC RELEVANT CONTEXT\n" +
+				"% -----------------------------------------------------------------------------\n" +
+				"bcParamCover(BC,Ctx,Param) :- hasParamValue(Ctx,Param,PVal), detParamValue(BC,Param,PVal2), trCovers(PVal,PVal2).\n" +
+				"notBcParamCover(BC,Ctx,Param) :- businessCase(BC), context(Ctx), hasContextClass(Ctx,CtxCl), hasParameter(CtxCl,Param), not bcParamCover(BC,Ctx,Param).\n" +
+				"detRelevantCtxs(BC,Ctx) :- bcParamCover(BC,Ctx,X), not notBcParamCover(BC,Ctx,Y).\n" +
+				"\n" +
+				"hasRelevantDescendant(BC,Ctx) :- detRelevantCtxs(BC,Ctx), detRelevantCtxs(BC,Ctx2), ctxInherits(Ctx2,Ctx), not w_ctxIdent(Ctx,Ctx2), Ctx!=Ctx2.\n" +
+				"detMostSpecificCtx(BC,Ctx) :- detRelevantCtxs(BC,Ctx), not hasRelevantDescendant(BC,Ctx).\n" +
+				"\n" +
+				"@output(\"detMostSpecificCtx\"). @post(\"detMostSpecificCtx\",\"orderby(1,2)\").\n" +
+				"@output(\"detRelevantCtxs\"). @post(\"detRelevantCtxs\",\"orderby(1,2)\").\n" +
+				"\n" +
+				"% -----------------------------------------------------------------------------\n" +
+				"% WARNINGS\n" +
+				"% -----------------------------------------------------------------------------\n" +
+				"w_incompleteCtxSpec(C) :- parameter(P), context(C), not hasParamValue(C,P,_).\n" +
+				"@output(\"w_incompleteCtxSpec\").\n" +
+				"\n" +
+				"ctxDiffParamValue(Ctx1,Ctx2) :- context(Ctx1), context(Ctx2), hasParamValue(Ctx1,P,PVal1), hasParamValue(Ctx2,P,PVal2), PVal1!=PVal2.\n" +
+				"w_ctxIdent(Ctx1,Ctx2) :- context(Ctx1), context(Ctx2), not ctxDiffParamValue(Ctx1,Ctx2),Ctx1!=Ctx2.\n" +
+				"@output(\"w_ctxIdent\").\n";
+		return output;
+	}
+
 }

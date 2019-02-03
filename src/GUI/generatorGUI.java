@@ -2,6 +2,10 @@ package GUI;
 
 import generator.ContextClass;
 import generator.DbUtils;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellRenderer;
@@ -10,6 +14,9 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.*;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
 public class generatorGUI {
@@ -88,16 +95,31 @@ public class generatorGUI {
         this.generateButtonCbr.addActionListener(new ActionListener() {
              @Override
              public void actionPerformed(ActionEvent e) {
+
                  int paramCount = Integer.parseInt(paramTextField.getText());
                  int contextCount = Integer.parseInt(contextTextField.getText());
                  int paramValuesCount = Integer.parseInt(paramValuesField.getText());
+                 int businessCasesCount = ((Integer.parseInt(paramValuesField.getText()) )*(Integer.parseInt(paramValuesField.getText())));
                  int runs = Integer.parseInt(runsTextField.getText());
+                 SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+                 String date = format.format(new Date());
                  for (int i = 0; i < runs; i++) {
+                     long start = System.currentTimeMillis();
                      ContextClass cbr = new ContextClass("aimCtx");
                      cbr.generateCbrData(paramCount, contextCount, paramCount, runs);
+                     long end = System.currentTimeMillis();
+                     NumberFormat fm = new DecimalFormat("#0.0000");
+                     String pTime = fm.format((end - start) / 1000d);
+                     addData("select * from CBR_Performance","INSERT INTO CBR_Performance VALUES(NULL," + paramCount + "," + contextCount + "," + paramValuesCount +
+                             "," + businessCasesCount + ",'" + date + "','" + pTime + "')");
+
                  }
+                 refreshTable();
+
+
              }
          });
+
     }
 
     public JTable fillTable(String Query) {
@@ -121,6 +143,27 @@ public class generatorGUI {
 
     }
 
+    public void addData(String Query, String update) {
+        JTable table = null;
+        try {
+            Connection connection= DriverManager.getConnection(
+                    "jdbc:mysql://db4free.net:3306/projektdke","gruppe1","Dke&Inheritance");
+            Statement stmt=connection.createStatement();
+            ResultSet rs2=stmt.executeQuery(Query);
+            stmt.executeUpdate(update);
+
+            //table = new JTable(DbUtils.resultSetToTableModel(rs2));
+            //resultsCbr.repaint(); // Repaint all the component (all Cells).
+
+            rs2.close();
+            stmt.close();
+            connection.close();
+
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
     public void resizeColumnWidth(JTable table) {
         final TableColumnModel columnModel = table.getColumnModel();
         for (int column = 0; column < table.getColumnCount(); column++) {
@@ -133,6 +176,22 @@ public class generatorGUI {
             if(width > 700)
                 width=700;
             columnModel.getColumn(column).setPreferredWidth(width);
+        }
+    }
+    public void refreshTable() {
+        Connection con = null;
+
+        try{
+            String query="select * from CBR_Performance";
+                con= DriverManager.getConnection(
+                    "jdbc:mysql://db4free.net:3306/projektdke","gruppe1","Dke&Inheritance");
+        PreparedStatement pstmt = con.prepareStatement(query);
+        ResultSet rs = pstmt.executeQuery();
+        resultsCbr.setModel(DbUtils.resultSetToTableModel(rs));
+        pstmt.close();
+        rs.close();
+        } catch (Exception e){
+            e.printStackTrace();
         }
     }
 

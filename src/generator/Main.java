@@ -1,6 +1,9 @@
 package generator;
 
+
 import GUI.generatorGUI;
+import java.text.NumberFormat;
+import java.text.DecimalFormat;
 
 import java.io.*;
 import java.sql.*;
@@ -19,13 +22,11 @@ public class Main {
             con.close();
         }catch(Exception e){ System.out.println(e);}
 */
-
+        long startTime = System.currentTimeMillis();
         generatorGUI generatorGUI = new generatorGUI();
 
 //ausgabe
         String file = "cbr_output.txt";
-
         ContextClass contexClass = new ContextClass("aimCtx");
-
     }
 }

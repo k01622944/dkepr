@@ -1,6 +1,5 @@
 package generator;
-import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
+import java.sql.*;
 
 import java.util.Vector;
 
@@ -11,20 +10,19 @@ import javax.swing.table.TableModel;
 public class DbUtils {
     public static TableModel resultSetToTableModel(ResultSet rs) {
         try {
+            Connection connection= DriverManager.getConnection(
+                    "jdbc:mysql://db4free.net:3306/projektdke","gruppe1","Dke&Inheritance");
             ResultSetMetaData metaData = rs.getMetaData();
             int numberOfColumns = metaData.getColumnCount();
             Vector columnNames = new Vector();
 
+            //columnNames.add("Id");
             columnNames.add("Parameter");
             columnNames.add("Kontexte");
             columnNames.add("Parameterwerte");
             columnNames.add("Business Cases");
+            columnNames.add("Date");
             columnNames.add("Ausführungszeit");
-
-          /*  // Get the column names
-            for (int column = 0; column < numberOfColumns; column++) {
-                columnNames.addElement(metaData.getColumnLabel(column + 1));
-            }*/
 
             // Get all rows.
             Vector rows = new Vector();
@@ -38,8 +36,9 @@ public class DbUtils {
 
                 rows.addElement(newRow);
             }
-
+            rs.close();
             return new DefaultTableModel(rows, columnNames);
+
         } catch (Exception e) {
             e.printStackTrace();
 
