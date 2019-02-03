@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="337ad04e-59f9-40b8-a6bb-967db8e37625" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/cbr_output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cbr_output.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/dkepr/GUI/generatorGUI$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/dkepr/GUI/generatorGUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/generatorGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/generatorGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generator/ContextClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/generator/ContextClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generator/DbUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/generator/DbUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generator/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/generator/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="337ad04e-59f9-40b8-a6bb-967db8e37625" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,13 +41,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/generator/ContextClass.java">
+        <entry file="file://$PROJECT_DIR$/cbr_output.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="107" lean-forward="true" selection-start-line="24" selection-start-column="107" selection-end-line="24" selection-end-column="107" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="145">
+              <caret line="52" column="44" lean-forward="true" selection-start-line="52" selection-start-column="44" selection-end-line="52" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -164,11 +153,11 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549201698610" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549202553441" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
@@ -258,12 +247,12 @@
       <workItem from="1548402935184" duration="1473000" />
       <workItem from="1548404530648" duration="1260000" />
       <workItem from="1548410920750" duration="8165000" />
-      <workItem from="1549183676354" duration="17887000" />
+      <workItem from="1549183676354" duration="18698000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100922000" />
+    <option name="totallyTimeSpent" value="101733000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -405,13 +394,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cbr_output.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/generator/DbUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
@@ -458,11 +440,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/generator/ContextClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
+        <state relative-caret-position="-1428">
           <caret line="24" column="107" lean-forward="true" selection-start-line="24" selection-start-column="107" selection-end-line="24" selection-end-column="107" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cbr_output.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="52" column="44" lean-forward="true" selection-start-line="52" selection-start-column="44" selection-end-line="52" selection-end-column="44" />
         </state>
       </provider>
     </entry>

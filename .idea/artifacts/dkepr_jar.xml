@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="dkepr:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/dkepr_jar</output-path>
+    <root id="archive" name="dkepr.jar">
+      <element id="module-output" name="dkepr" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/mysql/mysql-connector-java/8.0.13/mysql-connector-java-8.0.13.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/google/protobuf/protobuf-java/3.6.1/protobuf-java-3.6.1.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
