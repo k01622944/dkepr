@@ -143,7 +143,7 @@ public class generatorGUI {
                  for (int i = 0; i < runs; i++) {
                      long start = System.currentTimeMillis();
                      ContextClass cbr = new ContextClass("aimCtx");
-                     cbr.generateCbrData(paramCount, contextCount, paramCount, runs);
+                     cbr.generateCbrData(paramCount, contextCount, paramValuesCount, runs);
                      long end = System.currentTimeMillis();
                      NumberFormat fm = new DecimalFormat("#0.0000");
                      String pTime = fm.format((end - start) / 1000d);

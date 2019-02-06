@@ -59,14 +59,22 @@ public class ContextClass {
 				"% -----------------------------------------------------------------------------\n" +
 				"% Parameter values and their hierarchy\n";
 		String covers = "";
+		int help = 0;
 
-		for(int i =0; i<this.params.size(); i++){
-			hasParameter+=("hasParameter(\"" + this.className + "\",\"" + this.params.get(i).getName() + "\"). \n");
-			parameter+=("parameter(\"" + this.params.get(i).getName() + "\").\n");
-			paramValue+=(this.params.get(i).paramValuesToString());
-			covers+=(this.params.get(i).coversToString());
+			for (int i = 0; i < this.params.size(); i++) {
+				hasParameter += ("hasParameter(\"" + this.className + "\",\"" + this.params.get(i).getName() + "\"). \n");
+				parameter += ("parameter(\"" + this.params.get(i).getName() + "\").\n");
+
+			}
+		for(int j = 0; j < paramV;j++) {
+			if(help == this.params.size()){
+				help = 0;
+			} else {
+				paramValue += (this.params.get(help).paramValuesToString());
+				covers += (this.params.get(help).coversToString());
+				help++;
+			}
 		}
-
 		return hasParameter +'\n' + parameter +'\n' + paramValue +'\n' + covers;
 	}
 
