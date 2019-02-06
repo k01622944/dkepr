@@ -1,10 +1,11 @@
 package generator;
 
 
+
 import GUI.generatorGUI;
 import java.text.NumberFormat;
 import java.text.DecimalFormat;
-
+import dbCon.dbCon;
 import java.io.*;
 import java.sql.*;
 
@@ -24,6 +25,7 @@ public class Main {
 */
         long startTime = System.currentTimeMillis();
         generatorGUI generatorGUI = new generatorGUI();
+
 
 //ausgabe
         String file = "cbr_output.txt";

@@ -2,6 +2,7 @@ package GUI;
 
 import generator.ContextClass;
 import generator.DbUtils;
+import dbCon.dbCon;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -140,6 +141,8 @@ public class generatorGUI {
                  int runs = Integer.parseInt(runsTextField.getText());
                  SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
                  String date = format.format(new Date());
+                 dbCon db = new dbCon();
+                 db.createNewDatabase("cbr");
                  for (int i = 0; i < runs; i++) {
                      long start = System.currentTimeMillis();
                      ContextClass cbr = new ContextClass("aimCtx");
@@ -147,8 +150,9 @@ public class generatorGUI {
                      long end = System.currentTimeMillis();
                      NumberFormat fm = new DecimalFormat("#0.0000");
                      String pTime = fm.format((end - start) / 1000d);
-                     addData("select * from CBR_Performance","INSERT INTO CBR_Performance VALUES(NULL," + paramCount + "," + contextCount + "," + paramValuesCount +
-                             "," + businessCasesCount + ",'" + date + "','" + pTime + "')");
+                     db.insert(paramCount, contextCount, paramValuesCount, businessCasesCount, date , pTime);
+                     //addData("select * from CBR_Performance","INSERT INTO CBR_Performance VALUES(NULL," + paramCount + "," + contextCount + "," + paramValuesCount +
+                             //"," + businessCasesCount + ",'" + date + "','" + pTime + "')");
 
                  }
                  refreshTable();
@@ -188,7 +192,7 @@ public class generatorGUI {
         JTable table = null;
         try {
         Connection connection= DriverManager.getConnection(
-                "jdbc:mysql://db4free.net:3306/projektdke","gruppe1","Dke&Inheritance");
+                "jdbc:sqlite:cbr.db");
         Statement stmt=connection.createStatement();
         ResultSet rs=stmt.executeQuery(Query);
 
@@ -267,7 +271,7 @@ public class generatorGUI {
         try{
             String query="select * from CBR_Performance";
                 con= DriverManager.getConnection(
-                    "jdbc:mysql://db4free.net:3306/projektdke","gruppe1","Dke&Inheritance");
+                        "jdbc:sqlite:cbr.db");
         PreparedStatement pstmt = con.prepareStatement(query);
         ResultSet rs = pstmt.executeQuery();
         resultsCbr.setModel(DbUtils.resultSetToTableModel(rs));

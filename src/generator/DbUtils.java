@@ -11,7 +11,7 @@ public class DbUtils {
     public static TableModel resultSetToTableModel(ResultSet rs) {
         try {
             Connection connection= DriverManager.getConnection(
-                    "jdbc:mysql://db4free.net:3306/projektdke","gruppe1","Dke&Inheritance");
+                    "jdbc:sqlite:cbr.db");
             ResultSetMetaData metaData = rs.getMetaData();
             int numberOfColumns = metaData.getColumnCount();
             Vector columnNames = new Vector();
